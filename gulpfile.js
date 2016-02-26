@@ -46,13 +46,6 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest(fonts.out));
 });
 
-// copy bootstrap required fonts to dest
-gulp.task('fonts', function () {
-    return gulp
-        .src(fonts.in)
-        .pipe(gulp.dest(fonts.out));
-});
-
 // compile scss
 gulp.task('sass', ['fonts'], function () {
     return gulp.src(css.in)
