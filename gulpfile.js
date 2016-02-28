@@ -1,7 +1,7 @@
 /* gulpfile.js */
 var gulp    = require('gulp'),
-    sass    = require('gulp-sass');
-    image   = require('gulp-image');
+    sass    = require('gulp-sass'),
+    image   = require('gulp-image'),
     uglify  = require('gulp-uglify');
 
 // source and distribution folder

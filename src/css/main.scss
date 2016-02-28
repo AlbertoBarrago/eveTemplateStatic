@@ -3,6 +3,10 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
+body {
+	overflow-x:hidden; 
+}
+
 // GENERAL STYLE FOR DISPLAY BACKGROUND
 #home {
 	width: 100%;
@@ -14,12 +18,31 @@
 	text-align: center;
 }
 
-// STYLE FOR LOGO
+// STYLE FOR LOGO AND GREENSOCK ELEMENTS
 #logo_eve {
 	position: relative;
+	display: block;
 	float:left;
 	margin-top: -7%;
 	margin-left: 2%;
+	left: -10px;
+	opacity: 0;
+}
+
+#welcome_title {
+	position: relative;
+	opacity: 0;
+	top: -30px;
+}
+
+#hr_custom {
+	width: 0;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	border-top: 10px solid white;
+
 }
 
 // MAIN CONTAINER
@@ -47,6 +70,7 @@
 
 #contact {
 	padding-top: 3%;
+	font-size: 1.4em;
 }
 
 // STYLE FOR SOCIAL
@@ -54,13 +78,3 @@
   	margin-top: 10%;
 }
 
-
-// CUSTOM CLASS_STYLE FOR EVE_STATIC 
-.eve_hr {
-	width: 7%;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-
-	border-top: 10px solid white;
-}
