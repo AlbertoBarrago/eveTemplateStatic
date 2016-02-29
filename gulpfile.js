@@ -2,7 +2,8 @@
 var gulp    = require('gulp'),
     sass    = require('gulp-sass'),
     image   = require('gulp-image'),
-    uglify  = require('gulp-uglify');
+    uglify  = require('gulp-uglify'),
+    browserSync = require('browser-sync');
 
 // source and distribution folder
 var source  = 'src/',
@@ -39,6 +40,16 @@ var css = {
     }
 };
 
+
+gulp.task('browser-sync', function() { 
+    browserSync.init(["dist/css/*", "dist/js/*", "dist/img/**/*"], {
+      server: {
+        baseDir: "./"
+      }
+    });
+});
+
+
 // copy bootstrap required fonts to dest
 gulp.task('fonts', function () {
     return gulp
@@ -68,7 +79,7 @@ gulp.task('image', function () {
 });
 
 // default task
-gulp.task('default', ['sass', 'image', 'compress'], function () {
+gulp.task('default', ['sass', 'image', 'compress', 'browser-sync'], function () {
      gulp.watch(css.watch, ['sass']);
      gulp.watch(js.watch, ['compress']);
 });

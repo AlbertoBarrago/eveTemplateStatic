@@ -6306,6 +6306,9 @@ body {
   margin-right: auto;
   border-top: 10px solid white; }
 
+#paragraph_text {
+  opacity: 0; }
+
 #main_container {
   margin-top: 10%;
   color: white; }
