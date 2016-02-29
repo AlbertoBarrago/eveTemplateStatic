@@ -6327,3 +6327,20 @@ body {
 
 #social {
   margin-top: 10%; }
+
+@media only screen and (max-width: 480px) {
+  #logo_eve {
+    position: relative;
+    display: block;
+    float: left;
+    margin-top: -7%;
+    margin-left: 2%;
+    left: -10px;
+    opacity: 0; }
+  #welcome_title {
+    padding-top: 80px; }
+  #textOnMiddle {
+    font-size: .9em; }
+  #contact {
+    padding-top: 20%;
+    font-size: 1em; } }
