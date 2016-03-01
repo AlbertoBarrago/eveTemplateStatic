@@ -4,8 +4,14 @@
 @import "bootstrap/theme";
 
 body {
-	overflow-x:hidden; 
+	overflow:hidden; 
 }
+
+// MEDIA QUERIES BY ALBZ
+$minWidth: 480px;
+$mediumWidth: 1200px;
+$largeWidth:  2560px;
+
 
 // GENERAL STYLE FOR DISPLAY BACKGROUND
 #home {
@@ -52,11 +58,12 @@ body {
 // MAIN CONTAINER
 #main_container {
 
-	margin-top: 10%;
+	padding-top: 10%;
 	color:white;
 
 	h1 {
 	  font-size: 10vw;
+	  margin-top: 3%;
 	}
 }
 
@@ -75,15 +82,51 @@ body {
 #contact {
 	padding-top: 3%;
 	font-size: 1.4em;
+	opacity: 0;
 }
 
 // STYLE FOR SOCIAL
 #social {
   	margin-top: 10%;
+  	opacity: 0;
+}
+
+// Animate AREA STELLE 
+.movie-star	{ 
+	background-image:  url("../img/stelle/stelle-1.png"), url("../img/stelle/stelle-2.png"), url("../img/stelle/stelle-3.png"),url("../img/stelle/stelle-4.png"),url("../img/stelle/stelle-5.png");
+	background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px;
+	background-repeat:  repeat-x,repeat-x,repeat-x,repeat-x,repeat-x;
+}
+
+@keyframes animatedStars {
+	from { background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px; }
+	to { background-position: 0px -35px, 0px 134px, 0px -130px, 0px -65px, 0px -290px; }
+}
+		
+.movie-star	{ 
+	animation: animatedStars 2s alternate linear infinite;
+	 
 }
 
 
-@media only screen and (max-width : 480px) {
+// Animate AREA NUVOLE DEFAULT
+.animate-area	{ 
+	background-image:  url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png"), url("../img/nuvole/Nuvole-3.png");
+	background-position: 0px 0px, 0px 0px, 0px 0px;
+	background-repeat:  repeat-x, repeat-x , repeat-x;
+}
+
+@keyframes animatedClouds {
+	from { background-position: 0px 0px, 0px 0px, 0px 0px; }
+	to { background-position: 0px 50px, 0px 20px, 0px 50px; }
+}
+		
+.animate-area	{ 
+	animation: animatedClouds 4s alternate linear infinite;
+	 
+}
+
+@media (max-width: $minWidth) { 
 
 	#logo_eve {
 	position: relative;
@@ -96,7 +139,7 @@ body {
 	}
 	
 	#welcome_title {
-		padding-top:80px;
+		padding-top:60px;
 	}
 
 	#textOnMiddle {
@@ -108,4 +151,72 @@ body {
 	font-size: 1em;
 	}
 }
+
+@media (min-width: $mediumWidth) {
+
+	#welcome_title {
+		padding-top:0;
+	}
+
+	#contact {
+	padding-top: 3%;
+	font-size: 2em;
+	}
+
+	#social {
+		margin-top: 5%;
+		padding-bottom: 4%;
+	}
+
+
+ }
+
+
+@media (min-width: $largeWidth) { 
+	
+	// MAIN CONTAINER
+	#main_container {
+
+		padding-top: 10%;
+		color:white;
+
+		h1 {
+		  font-size: 10vw;
+		  margin-top: 2%;
+		}
+	}
+
+	#welcome_title {
+		padding-top: 0;
+
+	}
+
+	#contact {
+	padding-top: 3%;
+	font-size: 2em;
+	}
+
+	#social {
+		margin-top: 6%;
+	}
+
+	.animate-area	{ 
+	background-image:  url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png"), url("../img/nuvole/Nuvole-3.png");
+	background-position: 0px 500px, 0px 600px, 0px 500px;
+	background-repeat:  repeat-x, repeat-x , repeat-x;
+	}
+
+	@keyframes animatedClouds {
+	from { background-position: 0px 500px, 0px 600px, 0px 500px; }
+	to { background-position: 0px 600px, 0px 500px, 0px 600px; }
+	}
+			
+	.animate-area	{ 
+		animation: animatedClouds 10s alternate linear infinite;
+		 
+	}
+}
+
+
+
 

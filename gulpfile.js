@@ -42,7 +42,7 @@ var css = {
 
 
 gulp.task('browser-sync', function() { 
-    browserSync.init(["dist/css/*", "dist/js/*", "dist/img/**/*"], {
+    browserSync.init(["dist/css/*", "dist/js/*", "dist/img/**/*", "html/*."], {
       server: {
         baseDir: "./"
       }
