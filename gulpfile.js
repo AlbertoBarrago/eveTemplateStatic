@@ -1,9 +1,9 @@
 /* gulpfile.js */
-var gulp    = require('gulp'),
-    sass    = require('gulp-sass'),
-    image   = require('gulp-image'),
-    uglify  = require('gulp-uglify'),
-    browserSync = require('browser-sync');
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    image        = require('gulp-image'),
+    uglify       = require('gulp-uglify'),
+    browserSync  = require('browser-sync');
 
 // source and distribution folder
 var source  = 'src/',

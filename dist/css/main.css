@@ -6378,13 +6378,14 @@ body {
 
 @media (min-width: 1200px) {
   #welcome_title {
-    padding-top: 0; }
+    padding-top: 0;
+    margin-top: -10px !important; }
   #contact {
     padding-top: 3%;
     font-size: 2em; }
   #social {
     margin-top: 5%;
-    padding-bottom: 4%; } }
+    padding-bottom: 6.3%; } }
 
 @media (min-width: 2560px) {
   #main_container {
