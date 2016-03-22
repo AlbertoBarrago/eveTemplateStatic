@@ -6,6 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(https://fonts.googleapis.com/css?family=Cousine:400,700);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6275,8 +6276,10 @@ button.close {
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1); }
 
+/* Google Font */
 body {
-  overflow: hidden; }
+  overflow: hidden;
+  font-family: 'Cousine'; }
 
 #home {
   width: 100%;
@@ -6346,9 +6349,10 @@ body {
   animation: animatedStars 2s alternate linear infinite; }
 
 .animate-area {
-  background-image: url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png"), url("../img/nuvole/Nuvole-3.png");
+  background-image: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
   background-position: 0px 0px, 0px 0px, 0px 0px;
-  background-repeat: repeat-x, repeat-x , repeat-x; }
+  background-size: cover,cover,cover;
+  background-repeat: no-repeat, no-repeat, no-repeat; }
 
 @keyframes animatedClouds {
   from {
@@ -6402,13 +6406,14 @@ body {
   #social {
     margin-top: 6%; }
   .animate-area {
-    background-image: url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png"), url("../img/nuvole/Nuvole-3.png");
-    background-position: 0px 500px, 0px 600px, 0px 500px;
-    background-repeat: repeat-x, repeat-x , repeat-x; }
+    background-image: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
+    background-position: 0px 100px, 0px 200px, 0px 100px;
+    background-size: cover,cover,cover;
+    background-repeat: no-repeat, no-repeat , no-repeat; }
   @keyframes animatedClouds {
     from {
-      background-position: 0px 500px, 0px 600px, 0px 500px; }
+      background-position: 0px 30px, 0px 100px, 0px 50px; }
     to {
-      background-position: 0px 600px, 0px 500px, 0px 600px; } }
+      background-position: 0px 10px, 0px 100px, 0px 10px; } }
   .animate-area {
     animation: animatedClouds 10s alternate linear infinite; } }

@@ -3,14 +3,20 @@
 @import "bootstrap";
 @import "bootstrap/theme";
 
+/* Google Font */
+@import url(https://fonts.googleapis.com/css?family=Cousine:400,700);
+
 body {
 	overflow:hidden; 
+	font-family: 'Cousine';
 }
 
 // MEDIA QUERIES BY ALBZ
 $minWidth: 480px;
 $mediumWidth: 1200px;
 $largeWidth:  2560px;
+
+$imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
 
 
 // GENERAL STYLE FOR DISPLAY BACKGROUND
@@ -111,9 +117,10 @@ $largeWidth:  2560px;
 
 // Animate AREA NUVOLE DEFAULT
 .animate-area	{ 
-	background-image:  url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png"), url("../img/nuvole/Nuvole-3.png");
+	background-image:  $imagecluod;
 	background-position: 0px 0px, 0px 0px, 0px 0px;
-	background-repeat:  repeat-x, repeat-x , repeat-x;
+	background-size: cover,cover,cover;
+	background-repeat:  no-repeat, no-repeat, no-repeat;
 }
 
 @keyframes animatedClouds {
@@ -202,14 +209,15 @@ $largeWidth:  2560px;
 	}
 
 	.animate-area	{ 
-	background-image:  url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png"), url("../img/nuvole/Nuvole-3.png");
-	background-position: 0px 500px, 0px 600px, 0px 500px;
-	background-repeat:  repeat-x, repeat-x , repeat-x;
+	background-image:  url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
+	background-position: 0px 100px, 0px 200px, 0px 100px;
+	background-size: cover,cover,cover;
+	background-repeat:  no-repeat, no-repeat , no-repeat;
 	}
 
 	@keyframes animatedClouds {
-	from { background-position: 0px 500px, 0px 600px, 0px 500px; }
-	to { background-position: 0px 600px, 0px 500px, 0px 600px; }
+	from { background-position: 0px 30px, 0px 100px, 0px 50px; }
+	to { background-position: 0px 10px, 0px 100px, 0px 10px; }
 	}
 			
 	.animate-area	{ 
