@@ -6279,7 +6279,8 @@ button.close {
 /* Google Font */
 body {
   overflow: hidden;
-  font-family: 'Cousine'; }
+  font-family: 'Cousine';
+  text-rendering: optimizeLegibility; }
 
 #home {
   width: 100%;
@@ -6336,8 +6337,8 @@ body {
 
 .movie-star {
   background-image: url("../img/stelle/stelle-1.png"), url("../img/stelle/stelle-2.png"), url("../img/stelle/stelle-3.png"), url("../img/stelle/stelle-4.png"), url("../img/stelle/stelle-5.png");
-  background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px;
-  background-repeat: repeat-x,repeat-x,repeat-x,repeat-x,repeat-x; }
+  background-size: cover,cover,cover;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat; }
 
 @keyframes animatedStars {
   from {
@@ -6346,19 +6347,19 @@ body {
     background-position: 0px -35px, 0px 134px, 0px -130px, 0px -65px, 0px -290px; } }
 
 .movie-star {
-  animation: animatedStars 2s alternate linear infinite; }
+  animation: animatedStars 4s alternate linear infinite; }
 
 .animate-area {
   background-image: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
-  background-position: 0px 0px, 0px 0px, 0px 0px;
   background-size: cover,cover,cover;
-  background-repeat: no-repeat, no-repeat, no-repeat; }
+  background-repeat: no-repeat, no-repeat , no-repeat;
+  height: 100%; }
 
 @keyframes animatedClouds {
   from {
-    background-position: 0px 0px, 0px 0px, 0px 0px; }
+    background-position: 0px 130px, 0px 110px, 0px -70px; }
   to {
-    background-position: 0px 50px, 0px 20px, 0px 50px; } }
+    background-position: 0px 100px, 0px 90px, 0px -20px; } }
 
 .animate-area {
   animation: animatedClouds 4s alternate linear infinite; }
@@ -6368,14 +6369,18 @@ body {
     position: relative;
     display: block;
     float: left;
-    margin-top: -7%;
+    margin-top: -5%;
     margin-left: 2%;
     left: -10px;
     opacity: 0; }
+  .animate-area {
+    background-image: none; }
+  .movie-star {
+    background-image: none; }
   #welcome_title {
-    padding-top: 60px; }
+    padding-top: 10%; }
   #textOnMiddle {
-    font-size: .9em; }
+    font-size: 1.15em; }
   #contact {
     padding-top: 20%;
     font-size: 1em; } }
@@ -6385,7 +6390,7 @@ body {
     padding-top: 0;
     margin-top: -10px !important; }
   #contact {
-    padding-top: 3%;
+    padding-top: 4%;
     font-size: 2em; }
   #social {
     margin-top: 5%;
@@ -6404,16 +6409,4 @@ body {
     padding-top: 3%;
     font-size: 2em; }
   #social {
-    margin-top: 6%; }
-  .animate-area {
-    background-image: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
-    background-position: 0px 100px, 0px 200px, 0px 100px;
-    background-size: cover,cover,cover;
-    background-repeat: no-repeat, no-repeat , no-repeat; }
-  @keyframes animatedClouds {
-    from {
-      background-position: 0px 30px, 0px 100px, 0px 50px; }
-    to {
-      background-position: 0px 10px, 0px 100px, 0px 10px; } }
-  .animate-area {
-    animation: animatedClouds 10s alternate linear infinite; } }
+    margin-top: 6%; } }

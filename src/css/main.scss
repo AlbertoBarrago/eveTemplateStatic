@@ -9,14 +9,14 @@
 body {
 	overflow:hidden; 
 	font-family: 'Cousine';
+	text-rendering: optimizeLegibility;
 }
 
-// MEDIA QUERIES BY ALBZ
+// Variabili per viewPort
 $minWidth: 480px;
 $mediumWidth: 1200px;
 $largeWidth:  2560px;
 
-$imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
 
 
 // GENERAL STYLE FOR DISPLAY BACKGROUND
@@ -24,9 +24,7 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 	width: 100%;
 	background: url("../img/bg-home.jpg") no-repeat center center;
 	height: 100vh;
-
 	background-size: cover;
-
 	text-align: center;
 }
 
@@ -99,9 +97,10 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 
 // Animate AREA STELLE 
 .movie-star	{ 
-	background-image:  url("../img/stelle/stelle-1.png"), url("../img/stelle/stelle-2.png"), url("../img/stelle/stelle-3.png"),url("../img/stelle/stelle-4.png"),url("../img/stelle/stelle-5.png");
-	background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px;
-	background-repeat:  repeat-x,repeat-x,repeat-x,repeat-x,repeat-x;
+	background-image:  $starimage;
+	//background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px;
+	background-size: cover,cover,cover;
+	background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
 @keyframes animatedStars {
@@ -110,7 +109,7 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 }
 		
 .movie-star	{ 
-	animation: animatedStars 2s alternate linear infinite;
+	animation: animatedStars 4s alternate linear infinite;
 	 
 }
 
@@ -118,39 +117,48 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 // Animate AREA NUVOLE DEFAULT
 .animate-area	{ 
 	background-image:  $imagecluod;
-	background-position: 0px 0px, 0px 0px, 0px 0px;
+	//background-position: 0px 70px, 0px 80px, 0px 70px;
 	background-size: cover,cover,cover;
-	background-repeat:  no-repeat, no-repeat, no-repeat;
-}
+	background-repeat:  no-repeat, no-repeat , no-repeat;
+	height: 100%;
+	}
 
 @keyframes animatedClouds {
-	from { background-position: 0px 0px, 0px 0px, 0px 0px; }
-	to { background-position: 0px 50px, 0px 20px, 0px 50px; }
+	// First = WhiteLarge, Second:middle thiny, Third:black cloud 
+from { background-position: 0px 130px, 0px 110px, 0px -70px; }
+to { background-position: 0px 100px, 0px 90px, 0px -20px; }
 }
-		
+			
 .animate-area	{ 
 	animation: animatedClouds 4s alternate linear infinite;
+
 	 
 }
 
+
+
+// Smartphone viewPort
 @media (max-width: $minWidth) { 
 
 	#logo_eve {
 	position: relative;
 	display: block;
 	float:left;
-	margin-top: -7%;
+	margin-top: -5%;
 	margin-left: 2%;
 	left: -10px;
 	opacity: 0;
 	}
+
+	.animate-area { background-image: none;}
+	.movie-star {background-image: none;}
 	
 	#welcome_title {
-		padding-top:60px;
+		padding-top:10%;
 	}
 
 	#textOnMiddle {
-		font-size: .9em;
+		font-size: 1.15em;
 	}
 
 	#contact {
@@ -159,6 +167,8 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 	}
 }
 
+
+// Monitor 13'' pollici like macPro 
 @media (min-width: $mediumWidth) {
 
 	#welcome_title {
@@ -167,7 +177,7 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 	}
 
 	#contact {
-	padding-top: 3%;
+	padding-top: 4%;
 	font-size: 2em;
 	}
 
@@ -180,6 +190,7 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
  }
 
 
+// Big monitor imac27'' 
 @media (min-width: $largeWidth) { 
 	
 	// MAIN CONTAINER
@@ -208,22 +219,7 @@ $imagecluod: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"
 		margin-top: 6%;
 	}
 
-	.animate-area	{ 
-	background-image:  url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
-	background-position: 0px 100px, 0px 200px, 0px 100px;
-	background-size: cover,cover,cover;
-	background-repeat:  no-repeat, no-repeat , no-repeat;
-	}
-
-	@keyframes animatedClouds {
-	from { background-position: 0px 30px, 0px 100px, 0px 50px; }
-	to { background-position: 0px 10px, 0px 100px, 0px 10px; }
-	}
-			
-	.animate-area	{ 
-		animation: animatedClouds 10s alternate linear infinite;
-		 
-	}
+	
 }
 
 
