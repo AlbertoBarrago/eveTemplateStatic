@@ -6,14 +6,18 @@
 /* Google Font */
 @import url(https://fonts.googleapis.com/css?family=Cousine:400,700);
 
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
+
 body {
 	overflow:hidden; 
-	font-family: 'Cousine';
+	font-family: 'Cutive Mono';
 	text-rendering: optimizeLegibility;
 }
 
+
 // Variabili per viewPort
 $minWidth: 480px;
+$landScape: 568px;
 $mediumWidth: 1200px;
 $largeWidth:  2560px;
 
@@ -32,11 +36,15 @@ $largeWidth:  2560px;
 #logo_eve {
 	position: relative;
 	display: block;
-	float:left;
 	margin-top: -7%;
-	margin-left: 2%;
-	left: -10px;
+	padding-right: 70%;
+	left: -150px;
 	opacity: 0;
+
+	img {
+		width: 25%;
+		transition: all linear .2s;
+	}
 }
 
 #welcome_title {
@@ -95,63 +103,50 @@ $largeWidth:  2560px;
   	opacity: 0;
 }
 
-// Animate AREA STELLE 
-.movie-star	{ 
-	background-image:  $starimage;
-	//background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px;
-	background-size: cover,cover,cover;
-	background-repeat:  no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-}
 
-@keyframes animatedStars {
-	from { background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px; }
-	to { background-position: 0px -35px, 0px 134px, 0px -130px, 0px -65px, 0px -290px; }
-}
-		
-.movie-star	{ 
-	animation: animatedStars 4s alternate linear infinite;
-	 
-}
+@media (max-width: $landScape) { 
+
+	.animate-area { background-image: none;}
+	.movie-star {background-image: none;}
 
 
-// Animate AREA NUVOLE DEFAULT
-.animate-area	{ 
-	background-image:  $imagecluod;
-	//background-position: 0px 70px, 0px 80px, 0px 70px;
-	background-size: cover,cover,cover;
-	background-repeat:  no-repeat, no-repeat , no-repeat;
-	height: 100%;
+	#hr_custom {
+		border-top: 5px solid white;
 	}
 
-@keyframes animatedClouds {
-	// First = WhiteLarge, Second:middle thiny, Third:black cloud 
-from { background-position: 0px 130px, 0px 110px, 0px -70px; }
-to { background-position: 0px 100px, 0px 90px, 0px -20px; }
-}
-			
-.animate-area	{ 
-	animation: animatedClouds 4s alternate linear infinite;
+	#welcome_title {
+		padding-top:-10%;
+		margin-top: -5%;
+		font-size: .8em;
+		transition: all linear .2s;
 
-	 
-}
+	}
 
+	#contact {
+		font-size: .8em;
+		transition: all linear .2s;
+
+	}
+
+	#social {
+		margin-top: -1px;
+		padding-bottom: none;
+		padding-top: 2%;
+		transition: all linear .2s;
+
+	}
+
+
+}
 
 
 // Smartphone viewPort
 @media (max-width: $minWidth) { 
 
-	#logo_eve {
-	position: relative;
-	display: block;
-	float:left;
-	margin-top: -5%;
-	margin-left: 2%;
-	left: -10px;
-	opacity: 0;
-	}
 
-	.animate-area { background-image: none;}
-	.movie-star {background-image: none;}
+	#hr_custom {
+		border-top: 5px solid white;
+	}
 	
 	#welcome_title {
 		padding-top:10%;
@@ -165,6 +160,17 @@ to { background-position: 0px 100px, 0px 90px, 0px -20px; }
 	padding-top: 20%;
 	font-size: 1em;
 	}
+
+
+	#logo_eve {
+		
+		img {
+		width: 70%;
+		transition: all linear .2s;
+		}
+
+	}
+	
 }
 
 
@@ -175,6 +181,7 @@ to { background-position: 0px 100px, 0px 90px, 0px -20px; }
 		padding-top:0;
 		margin-top: -10px !important;
 	}
+
 
 	#contact {
 	padding-top: 4%;
@@ -221,6 +228,26 @@ to { background-position: 0px 100px, 0px 90px, 0px -20px; }
 
 	
 }
+
+
+
+// .header {
+// 	width: 782px; height: 150px;
+// 	/* DEFAULTS TO SUNNY */
+// 	background: url(images/header-sunny.png) no-repeat center center black;
+// 	}
+// 	.header-rain {
+// 		background: url(images/header-rain.png) no-repeat center center black;
+// 	}
+// 	header-snow {
+// 		background: url(images/header-snow.png) no-repeat center center black;
+// 	}
+// 	.header-sunny, .header-fair {
+// 		background: url(images/header-sunny.png) no-repeat center center black;
+// 	}
+// 	.header-partly-cloudy, .header-cloudy, .header-mostly-cloudy {
+// 		background: url(images/header-partlycloudy.png) no-repeat center center black;
+// }
 
 
 

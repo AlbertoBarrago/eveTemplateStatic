@@ -7,6 +7,7 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 @import url(https://fonts.googleapis.com/css?family=Cousine:400,700);
+@import url(https://fonts.googleapis.com/css?family=Cutive+Mono);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6279,7 +6280,7 @@ button.close {
 /* Google Font */
 body {
   overflow: hidden;
-  font-family: 'Cousine';
+  font-family: 'Cutive Mono';
   text-rendering: optimizeLegibility; }
 
 #home {
@@ -6292,11 +6293,13 @@ body {
 #logo_eve {
   position: relative;
   display: block;
-  float: left;
   margin-top: -7%;
-  margin-left: 2%;
-  left: -10px;
+  padding-right: 70%;
+  left: -150px;
   opacity: 0; }
+  #logo_eve img {
+    width: 25%;
+    transition: all linear .2s; }
 
 #welcome_title {
   position: relative;
@@ -6335,55 +6338,40 @@ body {
   margin-top: 10%;
   opacity: 0; }
 
-.movie-star {
-  background-image: url("../img/stelle/stelle-1.png"), url("../img/stelle/stelle-2.png"), url("../img/stelle/stelle-3.png"), url("../img/stelle/stelle-4.png"), url("../img/stelle/stelle-5.png");
-  background-size: cover,cover,cover;
-  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat; }
-
-@keyframes animatedStars {
-  from {
-    background-position: 0px -40px, 0px 140px, 0px -140px, 0px -70px, 0px -300px; }
-  to {
-    background-position: 0px -35px, 0px 134px, 0px -130px, 0px -65px, 0px -290px; } }
-
-.movie-star {
-  animation: animatedStars 4s alternate linear infinite; }
-
-.animate-area {
-  background-image: url("../img/nuvole/Nuvole-1.png"), url("../img/nuvole/Nuvole-2.png"), url("../img/nuvole/Nuvole-3.png");
-  background-size: cover,cover,cover;
-  background-repeat: no-repeat, no-repeat , no-repeat;
-  height: 100%; }
-
-@keyframes animatedClouds {
-  from {
-    background-position: 0px 130px, 0px 110px, 0px -70px; }
-  to {
-    background-position: 0px 100px, 0px 90px, 0px -20px; } }
-
-.animate-area {
-  animation: animatedClouds 4s alternate linear infinite; }
-
-@media (max-width: 480px) {
-  #logo_eve {
-    position: relative;
-    display: block;
-    float: left;
-    margin-top: -5%;
-    margin-left: 2%;
-    left: -10px;
-    opacity: 0; }
+@media (max-width: 568px) {
   .animate-area {
     background-image: none; }
   .movie-star {
     background-image: none; }
+  #hr_custom {
+    border-top: 5px solid white; }
+  #welcome_title {
+    padding-top: -10%;
+    margin-top: -5%;
+    font-size: .8em;
+    transition: all linear .2s; }
+  #contact {
+    font-size: .8em;
+    transition: all linear .2s; }
+  #social {
+    margin-top: -1px;
+    padding-bottom: none;
+    padding-top: 2%;
+    transition: all linear .2s; } }
+
+@media (max-width: 480px) {
+  #hr_custom {
+    border-top: 5px solid white; }
   #welcome_title {
     padding-top: 10%; }
   #textOnMiddle {
     font-size: 1.15em; }
   #contact {
     padding-top: 20%;
-    font-size: 1em; } }
+    font-size: 1em; }
+  #logo_eve img {
+    width: 70%;
+    transition: all linear .2s; } }
 
 @media (min-width: 1200px) {
   #welcome_title {
