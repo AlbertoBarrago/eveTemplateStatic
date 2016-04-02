@@ -6338,7 +6338,7 @@ body {
   margin-top: 10%;
   opacity: 0; }
 
-@media (max-width: 568px) {
+@media (max-width: 736px) {
   .animate-area {
     background-image: none; }
   .movie-star {
@@ -6375,7 +6375,7 @@ body {
 
 @media (min-width: 1200px) {
   #welcome_title {
-    padding-top: 0;
+    padding-top: 2%;
     margin-top: -10px !important; }
   #contact {
     padding-top: 4%;

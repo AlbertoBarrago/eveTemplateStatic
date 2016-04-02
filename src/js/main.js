@@ -16,4 +16,18 @@ $('document').ready(function(){
 		tl.add( TweenLite.to(contact_box, .8, {opacity:1, opacity:1, ease: Power1.easeIn}) );
 		tl.add( TweenLite.to(social_box, .85, {opacity:1, opacity:1, ease: Power2.easeIn}) );
 
+
+		function getVideo() {
+
+			var BV = new $.BigVideo();
+		    BV.init();
+		    BV.show('http://vjs.zencdn.net/v/oceans.mp4');
+
+		}
+
+		if($(window).width() >= 420) {
+			getVideo();
+		}
+		
+
 });

@@ -17,7 +17,7 @@ body {
 
 // Variabili per viewPort
 $minWidth: 480px;
-$landScape: 568px;
+$landScape: 736px;
 $mediumWidth: 1200px;
 $largeWidth:  2560px;
 
@@ -178,7 +178,7 @@ $largeWidth:  2560px;
 @media (min-width: $mediumWidth) {
 
 	#welcome_title {
-		padding-top:0;
+		padding-top:2%;
 		margin-top: -10px !important;
 	}
 
