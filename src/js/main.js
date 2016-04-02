@@ -18,10 +18,9 @@ $('document').ready(function(){
 
 
 		function getVideo() {
-
 			var BV = new $.BigVideo();
 		    BV.init();
-		    BV.show('http://vjs.zencdn.net/v/oceans.mp4');
+		    BV.show('http://vjs.zencdn.net/v/oceans.mp4',{ambient:true});
 
 		}
 
